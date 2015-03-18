@@ -330,7 +330,7 @@ download() {
 
   # fetch and unpack
   cd $builddir \
-    && $GET $url | tar xz --strip-components=1 > $LOGPATH 2>&1
+    && $GET $url | tar xzf - --strip-components=1 > $LOGPATH 2>&1
 
   # see if things are alright
   if test $? -gt 0; then
